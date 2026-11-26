@@ -10,6 +10,7 @@ export interface Network {
   chain: Chain;
   /** Your Checkout on this network, if you deployed one. */
   checkout?: Address;
+  vault?: Address;
   /** Only scan events from this block onward on the Activity page. */
   deployBlock?: bigint;
   /** Explorer links only make sense on the real testnet. */
@@ -42,6 +43,7 @@ const all: Record<NetworkKey, Network> = {
     label: "Local anvil",
     chain: localAnvil,
     checkout: address(process.env.NEXT_PUBLIC_CHECKOUT_LOCAL),
+    vault: address(process.env.NEXT_PUBLIC_VAULT_LOCAL),
     deployBlock: undefined,
     hasExplorer: false,
   },

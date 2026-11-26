@@ -274,3 +274,140 @@ dl.faq dd { margin: 0; color: var(--text-2); line-height: 1.65; }
   content: ""; position: absolute; left: 0; top: 0.3em; width: 14px; height: 14px;
   border: 1.5px solid var(--text-faint); border-radius: 4px;
 }
+
+/* PayFlow AI dashboard */
+.dashboard {
+  padding-bottom: 64px;
+}
+
+.dashboard-eyebrow {
+  color: var(--accent, #60f2ff);
+  font-family: var(--font-jetbrains);
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.dashboard-network {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 20px;
+  margin: 24px 0;
+  border: 1px solid var(--border, #292d35);
+  border-radius: 12px;
+  background: var(--surface, #15171c);
+  color: var(--muted, #a0a5b1);
+  font-size: 13px;
+}
+
+.dashboard-network strong {
+  color: var(--text, #f4f5f7);
+  font-family: var(--font-jetbrains);
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.dashboard-metric {
+  min-width: 0;
+  padding: 22px;
+}
+
+.dashboard-metric p,
+.dashboard-metric span {
+  color: var(--muted, #a0a5b1);
+  font-size: 13px;
+}
+
+.dashboard-metric h2 {
+  margin: 16px 0 10px;
+  font-family: var(--font-inter-tight);
+  font-size: clamp(20px, 2.2vw, 28px);
+  overflow-wrap: anywhere;
+}
+
+.dashboard-section {
+  margin-top: 20px;
+  padding: 24px;
+}
+
+.dashboard-section-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.dashboard-section-heading h2 {
+  margin: 0 0 8px;
+}
+
+.dashboard-section-heading p {
+  color: var(--muted, #a0a5b1);
+  font-size: 13px;
+}
+
+.dashboard-details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.dashboard-details > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  border: 1px solid var(--border, #292d35);
+  border-radius: 10px;
+}
+
+.dashboard-details span {
+  color: var(--muted, #a0a5b1);
+  font-size: 12px;
+}
+
+.dashboard-details strong {
+  font-family: var(--font-jetbrains);
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.dashboard-notice {
+  margin: 20px 0;
+  padding: 22px;
+}
+
+.dashboard-notice h3 {
+  margin: 0 0 10px;
+}
+
+.dashboard-notice p {
+  color: var(--muted, #a0a5b1);
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .dashboard-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .dashboard-grid,
+  .dashboard-details {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-section {
+    padding: 18px;
+  }
+}
